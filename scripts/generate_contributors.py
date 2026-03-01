@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path("whiteboxml")
 OUTPUT_FILE = Path("CONTRIBUTORS.md")
 
-author_pattern = re.compile(r":author:\s*(.+)")
+author_pattern = re.compile(r":authors:\s*(.+)")
 
 authors = set()
 
