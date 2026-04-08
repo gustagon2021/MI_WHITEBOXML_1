@@ -50,9 +50,7 @@ def funcion(a: np.ndarray, b: np.ndarray) -> np.ndarray:
     Breve descripción de la función.
 
     :param a: Descripción del parámetro a.
-    :type a: numpy.ndarray
     :param b: Descripción del parámetro b.
-    :type b: numpy.ndarray
     :return: Descripción del retorno.
     :authors: Tomás Macrade
     :date: 27/02/2026
@@ -62,8 +60,6 @@ def funcion(a: np.ndarray, b: np.ndarray) -> np.ndarray:
 ## Obligatorio incluir:
 
 - *: param :* para cada parámetro
-
-- *: type :* para cada parámetro
 
 - *: return :*
 
