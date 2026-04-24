@@ -31,7 +31,7 @@ def test_logistic_regression_fit_predict():
 
     # Usamos la métrica provista internamente por WhiteBoxML
     acc = accuracy(y, preds)
-    
+
     # Verificamos que alcance más de un 95% de accuracy
     assert acc > 0.95
 

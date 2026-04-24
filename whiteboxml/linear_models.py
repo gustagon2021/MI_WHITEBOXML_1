@@ -65,7 +65,7 @@ class LogisticRegression:
         n_samples, n_features = X.shape
         # Añadimos una columna de 1s para el término independiente (x0 = 1)
         X_with_bias = np.c_[np.ones((n_samples, 1)), X]
-        
+
         # Inicializamos los pesos en cero
         self.coef_ = np.zeros(n_features + 1)
 
@@ -76,7 +76,7 @@ class LogisticRegression:
             # Gradiente de la función de costo (entropía cruzada)
             # Promediamos dividiendo por n_samples
             gradient = (X_with_bias.T @ (y_predicted - y)) / n_samples
-            
+
             # Actualización de pesos usando Descenso de Gradiente
             self.coef_ -= self.learning_rate * gradient
 
@@ -92,8 +92,10 @@ class LogisticRegression:
         :date: 24/04/2026
         """
         if self.coef_ is None:
-            raise ValueError("El modelo debe ser entrenado con 'fit' antes de predecir.")
-        
+            raise ValueError(
+                "El modelo debe ser entrenado con 'fit' antes de predecir."
+            )
+
         X_with_bias = np.c_[np.ones((X.shape[0], 1)), X]
         linear_model = X_with_bias @ self.coef_
         return self._sigmoid(linear_model)
